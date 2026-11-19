@@ -27,10 +27,14 @@
 
 ## ▶ Watch: set up in one minute
 
-https://github.com/user-attachments/assets/103ad0d6-6345-4a3f-8113-ca0b74550154
+<div align="center">
 
-<sub>A real recording of the first-time setup on HyperOS 4, with taps and narration (76 s). Turn the
-sound on for the spoken guide. Can't play it here? <a href="assets/flowkeep-setup.mp4">Open the video file</a>.</sub>
+https://github.com/user-attachments/assets/7f266b69-382d-4c38-b627-3f94720d9f70
+
+<sub>A real recording of the first-time setup on HyperOS 4, with taps and narration (76 s).<br>
+Turn the sound on for the spoken guide. Can't play it here? <a href="assets/flowkeep-setup.mp4">Open the video file</a>.</sub>
+
+</div>
 
 ---
 
