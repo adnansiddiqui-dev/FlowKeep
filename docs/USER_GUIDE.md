@@ -2,13 +2,22 @@
 
 ## First launch
 
-1. HyperOS shows **"Review permissions"** for FlowKeep. Turn on **Modify system settings** and
-   **Access list of installed apps**, then tap **OK**. (Everything else on that list is unused.)
-2. Open FlowKeep again if HyperOS returned to the home screen.
-3. Read the two short pages, then choose your apps. **Google Play services is pre-selected**:
-   it delivers notifications for most apps.
-4. On **Three switches, then you're done**, tap each row until it says *Allowed*:
-   - **Modify system settings**: lets FlowKeep add your apps to Xiaomi's no-freeze list.
+1. HyperOS first shows its own **"Review permissions"** list for FlowKeep (Xiaomi shows it for
+   apps like this; FlowKeep can't change it). Only the first two switches matter: turn on
+   **Access list of installed apps** and **Modify system settings**, leave everything else off,
+   and tap **OK**.
+2. If either of those two is off, FlowKeep opens on **"Two permissions to start"** and goes no
+   further. Each permission has an **Allow** button that opens the right page:
+   - *Modify system settings* opens Android's page with one switch, **Allow modifying system
+     settings**.
+   - *Access list of installed apps* opens Xiaomi's permission page: tap **Other permissions**,
+     then turn on **Access list of installed apps**.
+
+   Come back to FlowKeep and the screen clears by itself. (It comes back the same way if one is
+   ever turned off later.)
+3. Read the two short pages, then choose apps. **Google Play services is pre-selected**: it
+   delivers notifications for most apps.
+4. On **Two more switches, then you're done**, tap each row until it says *Allowed*/*Done*:
    - **Autostart for FlowKeep**: lets FlowKeep fix the list while it's closed.
    - **Battery: No restrictions**: so HyperOS never freezes FlowKeep itself.
 5. Tap **Start FlowKeep**. Your apps are added at once.

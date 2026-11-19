@@ -1,80 +1,196 @@
 <p align="center">
-  <img src="assets/flowkeep-icon.png" width="112" alt="FlowKeep icon">
+  <img src="assets/flowkeep-icon.png" width="120" alt="FlowKeep icon">
 </p>
 
 <h1 align="center">FlowKeep</h1>
 
-<p align="center"><b>Let notifications flow.</b><br>
-Keeps the notifications from your important apps arriving on time on Xiaomi HyperOS.</p>
+<p align="center">
+  <b>Let notifications flow.</b><br>
+  Keeps WhatsApp, Messenger, Gmail and your other important apps delivering notifications on time on Xiaomi HyperOS.
+</p>
 
 <p align="center">
-  <a href="https://github.com/adnansiddiqui-dev/FlowKeep/releases/latest"><b>⬇ Download the latest APK</b></a>
+  <a href="https://github.com/adnansiddiqui-dev/FlowKeep/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/adnansiddiqui-dev/FlowKeep?label=latest&color=2f6bea"></a>
+  <a href="https://github.com/adnansiddiqui-dev/FlowKeep/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/adnansiddiqui-dev/FlowKeep/total?color=0a6e63"></a>
+  <img alt="Android 12+" src="https://img.shields.io/badge/Android-12%2B-3ddc84?logo=android&logoColor=white">
+  <img alt="Xiaomi HyperOS" src="https://img.shields.io/badge/Xiaomi-HyperOS-ff6900">
+  <img alt="No internet access" src="https://img.shields.io/badge/internet-not%20used-555">
+</p>
+
+<p align="center">
+  <a href="https://github.com/adnansiddiqui-dev/FlowKeep/releases/latest"><b>⬇&nbsp; Download the latest APK</b></a>
+  &nbsp;·&nbsp; <a href="#set-up-in-one-minute">Set‑up guide</a>
+  &nbsp;·&nbsp; <a href="#faq">FAQ</a>
 </p>
 
 ---
 
-## The problem
+## ▶ Watch: set up in one minute
 
-To save battery, HyperOS freezes apps you aren't using. A frozen app can't receive messages, so
-its notifications arrive late or not at all. Xiaomi keeps a list of apps it never freezes, but it
-rewrites that list now and then and drops apps it didn't choose. Google Play services, which
-delivers the notifications for most apps, has no setting to stay on it.
+<p align="center">
+  <a href="https://github.com/adnansiddiqui-dev/FlowKeep/blob/main/assets/flowkeep-setup.mp4">
+    <img src="assets/tutorial-cover.jpg" width="300" alt="Watch the one-minute setup video">
+  </a>
+  <br>
+  <sub>A real recording of the first-time setup, with taps and narration (76 s).</sub>
+</p>
+
+---
+
+## Why your notifications are late
+
+To save battery, HyperOS **freezes apps you aren't using**. A frozen app can't receive anything, so
+its messages pile up until you open it.
+
+Xiaomi keeps a hidden list of apps it never freezes, but it **rewrites that list now and then**
+(when you install apps or change battery settings) and drops anything it didn't choose.
+**Google Play services**, which delivers the notifications for most apps, has no switch to stay
+on that list at all.
+
+> The result: WhatsApp, Messenger, Gmail and others often deliver notifications late, or only
+> when you unlock the phone.
 
 ## What FlowKeep does
 
-- **One switch per app.** Turn an app on and FlowKeep puts it on Xiaomi's no-freeze list,
-  including Google Play services.
-- **Puts them back within seconds** whenever Xiaomi removes them, then asks Google Play services
-  to reconnect so pushes resume immediately.
-- **Guides the rest.** If an app's Xiaomi *Autostart* switch is off, FlowKeep shows you exactly
-  where to turn it on, and warns until it is.
-- **Suggests popular apps** that often miss notifications (messaging, social, email, work chat),
-  only the ones installed on your phone.
-- **Uses almost no battery.** Nothing runs until Xiaomi changes its list; an open, idle FlowKeep
-  draws nothing. Measured numbers: [Battery & performance](docs/BATTERY.md).
-- **Private by design.** No internet permission, no analytics, no ads, no account. It doesn't
-  need root, a second app or Developer options. See [Permissions & privacy](docs/PERMISSIONS.md).
+| | |
+|---|---|
+| 🔁 **Keeps your apps listed** | Turn an app on and FlowKeep adds it to Xiaomi's no-freeze list, Google Play services included. |
+| ⚡ **Fixes it within seconds** | When Xiaomi removes an app, FlowKeep puts it back in about two seconds and asks Google Play services to reconnect. |
+| 🧭 **Guides the rest** | If an app's Xiaomi *Autostart* is off, FlowKeep shows exactly where to turn it on and keeps a warning until it is. |
+| ✨ **Suggests apps** | Popular apps that often miss notifications (chat, social, email, work) are suggested, only the ones you have installed. |
+| 🔋 **Uses almost no battery** | Nothing runs until Xiaomi changes its list. [Measured numbers](docs/BATTERY.md). |
+| 🔒 **Private by design** | No internet permission, no ads, no analytics, no account. No root, no second app, no Developer options. |
+
+## How it works
+
+```mermaid
+flowchart LR
+    A["Xiaomi rewrites its<br/>no-freeze list"] --> B["Android notices<br/>the change"]
+    B --> C["FlowKeep wakes<br/>for a few milliseconds"]
+    C --> D["Your apps are put<br/>back and checked"]
+    D --> E["Google Play services<br/>reconnects"]
+```
+
+FlowKeep doesn't poll or keep anything running. Android itself watches the list and wakes FlowKeep
+only when it changes.
+
+## Screenshots
+
+<p align="center">
+  <img src="assets/screen-home.png" width="250" alt="Home: notifications are flowing">
+  &nbsp;
+  <img src="assets/screen-apps.png" width="250" alt="Choosing apps during setup">
+  &nbsp;
+  <img src="assets/screen-setup.png" width="250" alt="The last two setup switches">
+</p>
 
 ## Requirements
 
-- A **Xiaomi, Redmi or POCO** phone with **HyperOS**, **Android 12 or newer**.
+- A **Xiaomi, Redmi or POCO** phone with **HyperOS**, on **Android 12 or newer**.
 - Tested on a Redmi K90 with HyperOS 4 (China ROM, Android 17). Other models and HyperOS versions
-  should behave the same but are not confirmed yet; reports are welcome.
-- FlowKeep deliberately targets an older Android API level, because that is what lets an app edit
-  Xiaomi's list. HyperOS 4 (China) installs it normally; stock Android 14+ and possibly some global
-  ROMs refuse apps like this. If installation is blocked, please open an issue.
+  should work the same way but aren't confirmed yet; [reports are welcome](#feedback).
 
-## Install
+## Set up in one minute
 
-1. On your phone, open **[Releases](https://github.com/adnansiddiqui-dev/FlowKeep/releases/latest)**,
-   download `FlowKeep-….apk` and open it (allow installing from your browser if asked).
-2. HyperOS shows **Review permissions**: turn on **Modify system settings** and **Access list of
-   installed apps**, then tap OK.
-3. In FlowKeep's setup, tap the three switches it lists: **Modify system settings**, **Autostart
-   for FlowKeep** and **Battery: No restrictions**.
-4. Done. Google Play services is pre-selected; turn on your chat and mail apps on the home screen.
+1. **Download** `FlowKeep-….apk` from [Releases](https://github.com/adnansiddiqui-dev/FlowKeep/releases/latest)
+   on your phone and open it. Allow installing from your browser if asked.
+2. **Open FlowKeep.** Xiaomi first shows its own **Review permissions** list. Only the first two
+   matter:
+   - ✅ **Access list of installed apps**: so you can pick your apps.
+   - ✅ **Modify system settings**: so FlowKeep can edit Xiaomi's no-freeze list.
 
-To update, install the newer APK over the old one; your settings stay.
+   Leave everything else off and tap **OK**. If you land on the home screen, open FlowKeep again.
+   (Missed one? FlowKeep asks for it and waits until it's on.)
+3. **Get started**, read the two short pages, and **pick your apps**. Google Play services is
+   already selected; add WhatsApp, Messenger, your mail app and so on.
+4. **Two more switches**, each opening the right Xiaomi page:
+   - **Autostart for FlowKeep**: switch it on and confirm.
+   - **Battery: No restrictions**: choose *No restrictions*.
+5. Tap **Start FlowKeep**. Done: Home shows *Notifications are flowing*.
+
+**Updating:** install a newer APK over the old one. Your settings and permissions stay.
 
 Full walkthrough: [User guide](docs/USER_GUIDE.md).
 
-## Honest limits
+## FAQ
+
+<details>
+<summary><b>Is it safe? What can FlowKeep change?</b></summary>
+
+FlowKeep changes exactly one Xiaomi setting: its list of apps that are never frozen. It keeps every
+entry Xiaomi put there, re-reads the setting after each change, and backs up the original value.
+It has no internet permission, so nothing can leave your phone. See
+[Permissions & privacy](docs/PERMISSIONS.md).
+</details>
+
+<details>
+<summary><b>Why does Xiaomi show a long permission list on first launch?</b></summary>
+
+That screen is Xiaomi's, not FlowKeep's. To edit Xiaomi's list without root, FlowKeep has to be
+built for an older Android version, and HyperOS shows that review screen for such apps, listing
+its standard controls. Only the first two switches matter; leave the rest off.
+</details>
+
+<details>
+<summary><b>Does it drain the battery?</b></summary>
+
+No. Nothing runs between changes. In a 10-minute screen-off test FlowKeep used no measurable CPU of
+its own, and a repair takes a few milliseconds. Details: [Battery & performance](docs/BATTERY.md).
+</details>
+
+<details>
+<summary><b>Do I need root, Shizuku or Developer options?</b></summary>
+
+No. FlowKeep is a single app. It only needs the two permissions above plus Autostart and
+"No restrictions" for itself, all set from normal settings pages.
+</details>
+
+<details>
+<summary><b>What is Autostart and why does FlowKeep ask about it?</b></summary>
+
+Xiaomi's Autostart lets an app wake up after it was closed. FlowKeep needs it for itself, and your
+chat apps need it to wake for new messages. Xiaomi only lets you switch it on yourself, so FlowKeep
+opens the right page and warns you while it's off.
+</details>
+
+<details>
+<summary><b>Some notifications are still late at night. Why?</b></summary>
 
 Being on Xiaomi's list stops HyperOS's routine freezing. HyperOS has a few other limits, such as
-deep sleep at night, that no app can change, so FlowKeep makes late notifications much rarer but
+deep sleep at night, that no app can change. FlowKeep makes late notifications much rarer, but it
 can't promise every single one is instant.
+</details>
+
+<details>
+<summary><b>Will it work on Samsung, Pixel or a global Xiaomi ROM?</b></summary>
+
+FlowKeep is for Xiaomi HyperOS, where this freezing happens. Other brands don't have Xiaomi's list,
+and stock Android 14+ refuses to install apps built the way FlowKeep must be. Global HyperOS ROMs
+haven't been tested yet; if installation is blocked, please open an issue.
+</details>
+
+<details>
+<summary><b>Why isn't it on Google Play?</b></summary>
+
+Google Play requires apps to target a recent Android version, which would prevent FlowKeep from
+editing Xiaomi's list without root. So it's distributed here as an APK, signed with the same key
+for every release, so updates install over the old version.
+</details>
 
 ## Feedback
 
-Found a bug or have a phone it doesn't work on? Open an
+Found a bug, or have a phone it doesn't work on? Open an
 [issue](https://github.com/adnansiddiqui-dev/FlowKeep/issues) with your phone model and HyperOS
 version (Settings → About phone).
 
 ## Developer
 
-Made by **Adnan Siddiqui** · [adnansiddiqui.dev](https://adnansiddiqui.dev) ·
+Made by **Adnan Siddiqui** ·
+[adnansiddiqui.dev](https://adnansiddiqui.dev) ·
 [LinkedIn](https://www.linkedin.com/in/adnansiddiqui-dev/) ·
 [Facebook](https://www.facebook.com/adnansiddiqui.dev)
 
-FlowKeep is free to use. Its source code is not public. Xiaomi, Redmi, POCO, HyperOS and Google
-Play are trademarks of their owners; FlowKeep is not affiliated with them.
+---
+
+<sub>FlowKeep is free to use. Its source code is not public. Xiaomi, Redmi, POCO, HyperOS and
+Google Play are trademarks of their owners; FlowKeep is not affiliated with them.</sub>
