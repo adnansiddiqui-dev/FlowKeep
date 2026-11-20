@@ -29,10 +29,9 @@
 
 <div align="center">
 
-https://github.com/user-attachments/assets/7f266b69-382d-4c38-b627-3f94720d9f70
+https://github.com/user-attachments/assets/5bd4a0d3-883e-4025-b4f7-940babdf9167
 
-<sub>A real recording of the first-time setup on HyperOS 4, with taps and narration (76 s). Recorded with
-version 1.0: since 1.2 you choose your apps on the home screen after setup.<br>
+<sub>A real recording of the first-time setup on HyperOS 4, with taps and narration (65 s).<br>
 Turn the sound on for the spoken guide. Can't play it here? <a href="assets/flowkeep-setup.mp4">Open the video file</a>.</sub>
 
 </div>
@@ -114,7 +113,8 @@ only when it changes.
    services** (suggested first), then WhatsApp, Messenger, your mail app and so on. Nothing is
    turned on until you choose it.
 
-**Updating:** when a new version is out, Home shows *Update available*. Tap **Update**, then confirm
+**Updating:** when a new version is out, Home shows *Update available* (or tap **⟳** at the top of
+Home to check right away). Tap **Update**, then confirm
 in Xiaomi's installer ([steps](docs/USER_GUIDE.md#updating-flowkeep)). Installing a newer APK over the
 old one works too. Your apps, settings and permissions stay.
 
@@ -190,7 +190,8 @@ haven't been tested yet; if installation is blocked, please open an issue.
 <details>
 <summary><b>How do updates work?</b></summary>
 
-Once a day, while FlowKeep is open, it asks this page for the newest version. When there is one,
+Once a day, while FlowKeep is open, it asks this page for the newest version (tap **⟳** at the top
+of Home to check right away). When there is one,
 Home shows *Update available*. Tap **Update** and **Install update**: FlowKeep downloads it from
 here, checks it (size, checksum, and that it's signed by the same developer), and hands it to
 Android's installer. Xiaomi's installer then asks you to confirm a few times; on China ROMs tick

@@ -55,7 +55,9 @@
   list, because Xiaomi keeps it there for that setting.
 - Tap an app's name for its page: the same switch, and a short checklist (on the list,
   Autostart, battery).
-- The **ⓘ** button opens **About**: FlowKeep's GitHub page and the developer's links (website,
+- The **⟳** button at the top checks for a new FlowKeep right away; if there is one, it opens the
+  update (it shows a download icon with a dot while an update is waiting).
+- The **ⓘ** button (grouped with Settings) opens **About**: FlowKeep's GitHub page and the developer's links (website,
   LinkedIn, Facebook, WhatsApp).
 
 ## Settings
