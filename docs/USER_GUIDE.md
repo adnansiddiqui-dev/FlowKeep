@@ -41,6 +41,9 @@
     restrictions*. FlowKeep already stops HyperOS from freezing it, so that setting only uses
     extra battery (it also lets the app skip Android's Doze). Tap the row, then **Open
     settings**, choose **Battery saver (recommended)** and come back.
+  - *Locked in Recents · Tap to unlock*: the app is locked in Recents, which keeps it running
+    all the time. FlowKeep already keeps its messages coming, so the lock only uses memory and
+    battery. Open Recents, long-press the app, tap the lock to unlock it, and come back.
 - **Suggested** lists popular apps that often miss notifications on HyperOS (messaging, social,
   email, work chat, calls) — only the ones installed on your phone that you don't keep flowing
   yet. Flip one on, or tap **Turn on all**. FlowKeep never adds them by itself.
@@ -49,12 +52,13 @@
 - **Turning an app on** adds it to Xiaomi's no-freeze list immediately. If its Autostart is off,
   or its battery is set to *No restrictions*, FlowKeep shows what to change (both are on the
   same Xiaomi page). Xiaomi only lets *you* change these, so FlowKeep opens the exact page
-  instead of changing them.
+  instead of changing them. If the app is locked in Recents, the same sheet ends with a step
+  to unlock it there.
 - **Turning an app off** takes it off the list. If its Autostart is on, FlowKeep offers to open
   the page so you can turn that off too (optional). An app on *No restrictions* stays on the
   list, because Xiaomi keeps it there for that setting.
 - Tap an app's name for its page: the same switch, and a short checklist (on the list,
-  Autostart, battery).
+  Autostart, battery, and a Recents lock if it has one).
 - The **⟳** button at the top checks for a new FlowKeep right away; if there is one, it opens the
   update (it shows a download icon with a dot while an update is waiting).
 - The **ⓘ** button (grouped with Settings) opens **About**: FlowKeep's GitHub page and the developer's links (website,

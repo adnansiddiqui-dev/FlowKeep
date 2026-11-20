@@ -28,6 +28,9 @@ FlowKeep's target level), location, storage, accessibility, overlay, device admi
   direction (its provider requires a signature permission; even the shell is refused). FlowKeep
   only *reads* its effects: it warns when an app you keep is on *No restrictions* and opens that
   app's battery page so you can choose *Battery saver (recommended)*.
+- Unlocking an app in Recents. Xiaomi's lock call refuses every app that isn't a system app
+  (verified: `Permission Denial`), and the saved copy of the list (`locked_apps`) is only read
+  when the phone starts. FlowKeep only *reads* the locks and shows you how to unlock a kept app.
 - Seeing packages in Second space / Dual apps, or the ~34 packages HyperOS hides from all apps.
 - Overriding HyperOS's night-time freeze or GMS network limits.
 - Writing `MILLET_NO_RESTRICT_APP` from an app targeting API ≥ 23 (see RESEARCH).

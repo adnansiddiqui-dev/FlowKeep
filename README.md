@@ -57,7 +57,7 @@ on that list at all.
 |---|---|
 | 🔁 **Keeps your apps listed** | Turn an app on and FlowKeep adds it to Xiaomi's no-freeze list, Google Play services included. |
 | ⚡ **Fixes it within seconds** | When Xiaomi removes an app, FlowKeep puts it back in about two seconds and asks Google Play services to reconnect. |
-| 🧭 **Guides the rest** | If an app's Xiaomi *Autostart* is off, or its battery is on *No restrictions* (extra battery for nothing, once FlowKeep stops the freezing), FlowKeep shows exactly what to change and keeps a reminder until it's done. |
+| 🧭 **Guides the rest** | If an app's Xiaomi *Autostart* is off, its battery is on *No restrictions* (extra battery for nothing, once FlowKeep stops the freezing), or it's locked in Recents, FlowKeep shows exactly what to change and keeps a reminder until it's done. |
 | ✨ **Suggests apps** | Popular apps that often miss notifications (chat, social, email, work) are suggested, only the ones you have installed. |
 | 🔋 **Uses almost no battery** | Nothing runs until Xiaomi changes its list. [Measured numbers](docs/BATTERY.md). |
 | ⬆️ **Updates itself** | FlowKeep checks GitHub for a new version once a day while it's open. Tap **Update** and confirm in Android's installer. |
@@ -169,6 +169,15 @@ in the background, which costs battery. FlowKeep already keeps your apps off Hyp
 so the recommended *Battery saver* is enough. If an app you keep is on *No restrictions*,
 FlowKeep shows a *Save battery* tip and opens that app's battery page. Xiaomi doesn't let other
 apps change this setting, so you pick *Battery saver (recommended)* yourself; it takes one tap.
+</details>
+
+<details>
+<summary><b>Should I lock my apps in Recents?</b></summary>
+
+No. A lock keeps the app running all the time, which uses memory and battery. People lock apps
+so HyperOS doesn't close them and their messages keep coming, but FlowKeep already takes care of
+that. If an app you keep is locked, FlowKeep shows a tip. Xiaomi doesn't let apps change locks,
+so you unlock it yourself: open Recents, long-press the app and tap the lock.
 </details>
 
 <details>
