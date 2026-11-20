@@ -14,7 +14,7 @@
   <a href="https://github.com/adnansiddiqui-dev/FlowKeep/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/adnansiddiqui-dev/FlowKeep/total?color=0a6e63"></a>
   <img alt="Android 12+" src="https://img.shields.io/badge/Android-12%2B-3ddc84?logo=android&logoColor=white">
   <img alt="Xiaomi HyperOS" src="https://img.shields.io/badge/Xiaomi-HyperOS-ff6900">
-  <img alt="No internet access" src="https://img.shields.io/badge/internet-not%20used-555">
+  <img alt="Internet: updates only" src="https://img.shields.io/badge/internet-updates%20only-555">
 </p>
 
 <p align="center">
@@ -57,10 +57,11 @@ on that list at all.
 |---|---|
 | 🔁 **Keeps your apps listed** | Turn an app on and FlowKeep adds it to Xiaomi's no-freeze list, Google Play services included. |
 | ⚡ **Fixes it within seconds** | When Xiaomi removes an app, FlowKeep puts it back in about two seconds and asks Google Play services to reconnect. |
-| 🧭 **Guides the rest** | If an app's Xiaomi *Autostart* is off, FlowKeep shows exactly where to turn it on and keeps a warning until it is. |
+| 🧭 **Guides the rest** | If an app's Xiaomi *Autostart* is off, or its battery is on *No restrictions* (extra battery for nothing, once FlowKeep stops the freezing), FlowKeep shows exactly what to change and keeps a reminder until it's done. |
 | ✨ **Suggests apps** | Popular apps that often miss notifications (chat, social, email, work) are suggested, only the ones you have installed. |
 | 🔋 **Uses almost no battery** | Nothing runs until Xiaomi changes its list. [Measured numbers](docs/BATTERY.md). |
-| 🔒 **Private by design** | No internet permission, no ads, no analytics, no account. No root, no second app, no Developer options. |
+| ⬆️ **Updates itself** | FlowKeep checks GitHub for a new version once a day while it's open. Tap **Update** and confirm in Android's installer. |
+| 🔒 **Private by design** | No ads, no analytics, no account. It goes online only to check for its own updates (you can turn that off). No root, no second app, no Developer options. |
 
 ## How it works
 
@@ -104,12 +105,15 @@ only when it changes.
    (Missed one? FlowKeep asks for it and waits until it's on.)
 3. **Get started**, read the two short pages, and **pick your apps**. Google Play services is
    already selected; add WhatsApp, Messenger, your mail app and so on.
-4. **Two more switches**, each opening the right Xiaomi page:
+4. **Two more switches** for FlowKeep itself, each opening the right Xiaomi page:
    - **Autostart for FlowKeep**: switch it on and confirm.
-   - **Battery: No restrictions**: choose *No restrictions*.
+   - **Battery: No restrictions**: choose *No restrictions*. FlowKeep is the only app that needs
+     this; your other apps stay on *Battery saver*.
 5. Tap **Start FlowKeep**. Done: Home shows *Notifications are flowing*.
 
-**Updating:** install a newer APK over the old one. Your settings and permissions stay.
+**Updating:** when a new version is out, Home shows *Update available*. Tap **Update**, then confirm
+in Xiaomi's installer ([steps](docs/USER_GUIDE.md#updating-flowkeep)). Installing a newer APK over the
+old one works too. Your apps, settings and permissions stay.
 
 Full walkthrough: [User guide](docs/USER_GUIDE.md).
 
@@ -120,8 +124,8 @@ Full walkthrough: [User guide](docs/USER_GUIDE.md).
 
 FlowKeep changes exactly one Xiaomi setting: its list of apps that are never frozen. It keeps every
 entry Xiaomi put there, re-reads the setting after each change, and backs up the original value.
-It has no internet permission, so nothing can leave your phone. See
-[Permissions & privacy](docs/PERMISSIONS.md).
+It goes online only to ask GitHub for its own newest version, and sends nothing about you or your
+phone. See [Permissions & privacy](docs/PERMISSIONS.md).
 </details>
 
 <details>
@@ -155,6 +159,16 @@ opens the right page and warns you while it's off.
 </details>
 
 <details>
+<summary><b>Should I set my apps to "No restrictions" too?</b></summary>
+
+No, only FlowKeep needs it. *No restrictions* also lets an app skip Android's Doze and run freely
+in the background, which costs battery. FlowKeep already keeps your apps off HyperOS's freezer,
+so the recommended *Battery saver* is enough. If an app you keep is on *No restrictions*,
+FlowKeep shows a *Save battery* tip and opens that app's battery page. Xiaomi doesn't let other
+apps change this setting, so you pick *Battery saver (recommended)* yourself; it takes one tap.
+</details>
+
+<details>
 <summary><b>Some notifications are still late at night. Why?</b></summary>
 
 Being on Xiaomi's list stops HyperOS's routine freezing. HyperOS has a few other limits, such as
@@ -168,6 +182,16 @@ can't promise every single one is instant.
 FlowKeep is for Xiaomi HyperOS, where this freezing happens. Other brands don't have Xiaomi's list,
 and stock Android 14+ refuses to install apps built the way FlowKeep must be. Global HyperOS ROMs
 haven't been tested yet; if installation is blocked, please open an issue.
+</details>
+
+<details>
+<summary><b>How do updates work?</b></summary>
+
+Once a day, while FlowKeep is open, it asks this page for the newest version. When there is one,
+Home shows *Update available*. Tap **Update** and **Install update**: FlowKeep downloads it from
+here, checks it (size, checksum, and that it's signed by the same developer), and hands it to
+Android's installer. Xiaomi's installer then asks you to confirm a few times; on China ROMs tick
+*I understand…* before **Update**. You can turn automatic checks off in Settings → Updates.
 </details>
 
 <details>

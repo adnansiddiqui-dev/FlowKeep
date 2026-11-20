@@ -32,18 +32,26 @@
     on and come back. FlowKeep confirms with "All set".
   - *Removed by Xiaomi · Tap to fix*: tap the row to put it back now (FlowKeep also does this by
     itself within seconds).
+  - *No restrictions · Tap to save battery*: the app's Xiaomi battery setting is *No
+    restrictions*. FlowKeep already stops HyperOS from freezing it, so that setting only uses
+    extra battery (it also lets the app skip Android's Doze). Tap the row, then **Open
+    settings**, choose **Battery saver (recommended)** and come back.
 - **Suggested** lists popular apps that often miss notifications on HyperOS (messaging, social,
   email, work chat, calls) — only the ones installed on your phone that you don't keep flowing
   yet. Flip one on, or tap **Turn on all**. FlowKeep never adds them by itself.
 - **Other apps** lists your other apps. Flip the switch to start keeping one flowing.
   **Show system apps** reveals background apps too; searching always searches everything.
 - **Turning an app on** adds it to Xiaomi's no-freeze list immediately. If its Autostart is off,
-  FlowKeep shows how to turn it on. Xiaomi only lets *you* change Autostart, so FlowKeep opens the
-  exact page instead of changing it.
+  or its battery is set to *No restrictions*, FlowKeep shows what to change (both are on the
+  same Xiaomi page). Xiaomi only lets *you* change these, so FlowKeep opens the exact page
+  instead of changing them.
 - **Turning an app off** takes it off the list. If its Autostart is on, FlowKeep offers to open
-  the page so you can turn that off too (optional).
-- Tap an app's name for its page: the same switch, and a two-item checklist.
-- The **ⓘ** button explains how FlowKeep works in four lines.
+  the page so you can turn that off too (optional). An app on *No restrictions* stays on the
+  list, because Xiaomi keeps it there for that setting.
+- Tap an app's name for its page: the same switch, and a short checklist (on the list,
+  Autostart, battery).
+- The **ⓘ** button opens **About**: FlowKeep's GitHub page and the developer's links (website,
+  LinkedIn, Facebook, WhatsApp).
 
 ## Settings
 
@@ -53,8 +61,8 @@
 - **Start after restart** and **Alerts** (only when an app drops off and can't be put back).
 - **What FlowKeep needs**: the status of each permission; tap a row to open its page.
 - **Appearance**: System, Light or Dark.
-- **Developer**: Adnan Siddiqui's website, LinkedIn and Facebook (open in your browser) and
-  WhatsApp (opens the chat directly).
+- **Updates**: your version, **Check** (or **Update** when a new version is out) and **Check
+  automatically** (once a day while FlowKeep is open; it only asks GitHub for the newest version).
 - **Advanced** (for troubleshooting): History, Xiaomi's list (the exact value, add by package
   name, restore backups including the original), Smart/Eco checking, Fix automatically, Reconnect
   Google push, Export/Import, Diagnostics.
@@ -63,9 +71,27 @@
 
 - *"One permission needed"* → tap **Allow** and turn on **Modify system settings**.
 - *"Turn on Autostart for FlowKeep"* → tap **Open settings** and switch Autostart on.
-- *"One battery setting"* → choose *No restrictions* for FlowKeep.
+- *"One battery setting"* → choose *No restrictions* for FlowKeep. FlowKeep is the only app
+  that needs it.
+- *"<app> uses extra battery"* → tap **Fix** and choose *Battery saver (recommended)* for that
+  app.
 - Notifications still late for one app → check that its row says *Flowing* (Autostart on). If
   it does, try **Instant fixing** in Settings.
+
+## Updating FlowKeep
+
+1. When a new version is out, Home shows **Update available** (and Settings → Updates says so).
+   Tap **Update**, read *What's new*, then tap **Install update**. FlowKeep downloads it from its
+   GitHub page and checks it before installing.
+2. Xiaomi's installer takes over. On China ROMs it asks several times: **Continue** → *Couldn't
+   find ICP registration info* → **Install** → tick *I understand this app wasn't security-checked*
+   → **Update** → *Unverified app* → **Install anyway**.
+3. Done: FlowKeep is the new version. Your apps, settings and permissions stay.
+
+Updating to 1.1.0 from an older version (or any version that adds a permission) shows HyperOS's
+**Review permissions** list once more. Turn on the first two again (**Access list of installed
+apps**, **Modify system settings**), leave the rest off (including *Connect to nearby devices*),
+and tap **OK**. Tap **Later** in the update sheet to hide the Home card for that version.
 
 ## Undo everything
 
