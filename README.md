@@ -31,7 +31,8 @@
 
 https://github.com/user-attachments/assets/7f266b69-382d-4c38-b627-3f94720d9f70
 
-<sub>A real recording of the first-time setup on HyperOS 4, with taps and narration (76 s).<br>
+<sub>A real recording of the first-time setup on HyperOS 4, with taps and narration (76 s). Recorded with
+version 1.0: since 1.2 you choose your apps on the home screen after setup.<br>
 Turn the sound on for the spoken guide. Can't play it here? <a href="assets/flowkeep-setup.mp4">Open the video file</a>.</sub>
 
 </div>
@@ -98,18 +99,20 @@ only when it changes.
    on your phone and open it. Allow installing from your browser if asked.
 2. **Open FlowKeep.** Xiaomi first shows its own **Review permissions** list. Only the first two
    matter:
-   - ✅ **Access list of installed apps**: so you can pick your apps.
+   - ✅ **Access list of installed apps**: so you can choose your apps.
    - ✅ **Modify system settings**: so FlowKeep can edit Xiaomi's no-freeze list.
 
    Leave everything else off and tap **OK**. If you land on the home screen, open FlowKeep again.
    (Missed one? FlowKeep asks for it and waits until it's on.)
-3. **Get started**, read the two short pages, and **pick your apps**. Google Play services is
-   already selected; add WhatsApp, Messenger, your mail app and so on.
-4. **Two more switches** for FlowKeep itself, each opening the right Xiaomi page:
+3. **Get started** and read the two short pages.
+4. **Two switches** for FlowKeep itself, each opening the right Xiaomi page. Both are required;
+   each row turns to *Done* when you come back:
    - **Autostart for FlowKeep**: switch it on and confirm.
    - **Battery: No restrictions**: choose *No restrictions*. FlowKeep is the only app that needs
      this; your other apps stay on *Battery saver*.
-5. Tap **Start FlowKeep**. Done: Home shows *Notifications are flowing*.
+5. Tap **Start FlowKeep**, then **choose your apps** on the home screen: start with **Google Play
+   services** (suggested first), then WhatsApp, Messenger, your mail app and so on. Nothing is
+   turned on until you choose it.
 
 **Updating:** when a new version is out, Home shows *Update available*. Tap **Update**, then confirm
 in Xiaomi's installer ([steps](docs/USER_GUIDE.md#updating-flowkeep)). Installing a newer APK over the

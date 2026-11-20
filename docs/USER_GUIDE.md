@@ -15,23 +15,28 @@
 
    Come back to FlowKeep and the screen clears by itself. (It comes back the same way if one is
    ever turned off later.)
-3. Read the two short pages, then choose apps. **Google Play services is pre-selected**: it
-   delivers notifications for most apps.
-4. On **Two more switches, then you're done**, tap each row until it says *Allowed*/*Done*:
+3. Read the two short pages.
+4. On **Two switches, then you're done**, tap each row, switch it on in Xiaomi's page, and come
+   back. Each row turns to **Done** by itself (FlowKeep re-checks as you return):
    - **Autostart for FlowKeep**: lets FlowKeep fix the list while it's closed.
    - **Battery: No restrictions**: so HyperOS never freezes FlowKeep itself.
-5. Tap **Start FlowKeep**. Your apps are added at once.
+
+   **Start FlowKeep** only works once both are done.
+5. Tap **Start FlowKeep**. Home opens with nothing turned on yet: choose your apps there,
+   starting with **Google Play services** (it delivers most apps' notifications), then your chat
+   and mail apps.
 
 ## Every day: one screen, one switch per app
 
 - The **top card** says, in one sentence, whether everything is fine ("Notifications are
   flowing") or the one thing to tap next. Your kept apps ride on a flowing line at the bottom of
   the card; an amber ring and dot mean that app needs a tap.
-- **Keep flowing** lists your apps. Each row says *Flowing*, or what's wrong:
+- **Keep flowing** lists your apps (it appears once you've turned one on). Each row says
+  *Flowing*, or what's wrong:
   - *Autostart is off · Tap to fix*: tap the row, then **Open settings**, switch **Autostart**
     on and come back. FlowKeep confirms with "All set".
-  - *Removed by Xiaomi · Tap to fix*: tap the row to put it back now (FlowKeep also does this by
-    itself within seconds).
+  - *Removed by Xiaomi · Tap to fix*: tap the row to put it back right away (FlowKeep also does
+    this by itself within seconds).
   - *No restrictions · Tap to save battery*: the app's Xiaomi battery setting is *No
     restrictions*. FlowKeep already stops HyperOS from freezing it, so that setting only uses
     extra battery (it also lets the app skip Android's Doze). Tap the row, then **Open
